@@ -1,7 +1,6 @@
 **Allat nevek**
 kutya | macska | teknos
 :----: |:----:|:----:
-burkus | cirmi | janos
 bodri | cecil | lorant
 
 

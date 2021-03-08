@@ -1,5 +1,10 @@
 package hu.bme.mit.train.interfaces;
 
+import com.google.common.collect.Table;
+
+import java.time.LocalDate;
+import java.util.Date;
+
 public interface TrainController {
 
 	void followSpeed();
@@ -11,5 +16,9 @@ public interface TrainController {
 	void setJoystickPosition(int joystickPosition);
 
 	int getStep();
+
+	Table<LocalDate,Integer,Integer> getTachograph();
+
+	void addTachograph(Integer j,Integer r);
 
 }

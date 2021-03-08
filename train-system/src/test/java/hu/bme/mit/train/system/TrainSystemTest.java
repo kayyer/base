@@ -25,6 +25,7 @@ public class TrainSystemTest {
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+
 	}
 	
 	@Test
@@ -56,6 +57,14 @@ public class TrainSystemTest {
 		controller.setJoystickPosition(5);
 		Assert.assertEquals(5,controller.getStep());
 	}
+
+	@Test
+	public void tachoGraphTest(){
+
+		controller.addTachograph(2,3);
+		Assert.assertFalse(controller.getTachograph().isEmpty());
+	}
+
 
 	
 }

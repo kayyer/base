@@ -4,6 +4,7 @@ import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 import hu.bme.mit.train.interfaces.TrainController;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TrainControllerImpl implements TrainController {
@@ -11,7 +12,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	private Table<Date,Integer,Integer> tachograpf = HashBasedTable.create();
+	private Table<LocalDate,Integer,Integer> tachograpf = HashBasedTable.create();
 
 	@Override
 	public void followSpeed() {
@@ -60,4 +61,13 @@ public class TrainControllerImpl implements TrainController {
 		return step;
 	}
 
+	public void addTachograph(Integer j,Integer r) {
+		LocalDate myObj = LocalDate.now();
+		tachograpf.put(myObj,j,r);
+	}
+
+
+	public Table<LocalDate,Integer,Integer> getTachograph() {
+		return tachograpf;
+	}
 }

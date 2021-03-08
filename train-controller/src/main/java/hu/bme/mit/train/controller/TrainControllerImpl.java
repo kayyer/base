@@ -47,7 +47,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	public void writeSpeed(){
-		System.out.println("The reference speed is: " +  referenceSpeed);
+		System.ut.println("The reference speed is: " +  referenceSpeed);
 		System.out.println("The speed limit is: " + speedLimit);
 	}
 }

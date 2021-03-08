@@ -50,4 +50,8 @@ public class TrainControllerImpl implements TrainController {
 		System.out.println("The reference speed is: " +  referenceSpeed);
 		System.out.println("The speed limit is: " + speedLimit);
 	}
+
+	public int getStep() {
+		return step;
+	}
 }
